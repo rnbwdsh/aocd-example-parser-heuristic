@@ -1,0 +1,26 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "aocd-example-parser-heuristic"
+version = "2023.1"
+description = "Custom heuristic implementation of an example parser plugin for advent-of-code-data"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Games/Entertainment :: Puzzle Games",
+]
+
+[[project.authors]]
+name = "rnbwdsh"
+
+[project.urls]
+Home = "https://github.com/rnbwdsh/aocd-example-parser-heuristic"
+
+[project.entry-points."adventofcode.examples"]
+heuristic = "aocd_example_parser_heuristic.heuristic:extract_heuristic"
